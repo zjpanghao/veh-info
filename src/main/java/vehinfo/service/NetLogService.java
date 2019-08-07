@@ -131,6 +131,11 @@ public class NetLogService {
                             status = READ_STATUS.READ_LENGTH;
                             buf.reset();
                             timeStamp = System.currentTimeMillis() / 1000;
+                        } else {
+                            try {
+                                Thread.sleep(50);
+                            } catch (InterruptedException e) {
+                            }
                         }
                         break;
                     case READ_LENGTH:

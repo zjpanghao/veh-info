@@ -44,4 +44,9 @@ public class VehController {
     public long largest() {
         return netLogService.getLargestSize();
     }
+
+    @RequestMapping("/park")
+    public String park() {
+        return netLogService.getPark();
+    }
 }
